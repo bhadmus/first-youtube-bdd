@@ -1,0 +1,12 @@
+{
+    "testFiles": [
+        "Standard.feature",
+        "Problem.feature",
+        "Locked.feature",
+        "Performance.feature"
+    ],
+    "baseUrl": "https://www.saucedemo.com",
+    "viewportHeight": 900,
+    "viewportWidth": 1400,
+    "defaultCommandTimeout": 10000
+}
