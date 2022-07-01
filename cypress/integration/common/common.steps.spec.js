@@ -9,22 +9,3 @@ Then(/^I insert the password$/, () => {
 When(/^I click the Login button$/, () => {
 	cy.ClickLoginButton()
 });
-// Then(/^I insert the "([^"]*)" username$/, (userType) => {
-// 	cy.fixture('selectors').then((el)=>{
-// 		switch (userType) {
-// 			case 'standard':
-// 				cy.InsertUsername(el.standard)
-// 				break
-// 			case 'problem':
-// 				cy.InsertUsername(el.problem)
-// 				break
-// 			case 'glitch':
-// 				cy.InsertUsername(el.glitch)
-// 				break
-// 			case 'locked':
-// 				cy.InsertUsername(el.locked)
-			
-// 		}
-
-// 	})
-// });
