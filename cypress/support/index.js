@@ -1,6 +1,5 @@
 import './commands'
 import './customLogin/standard.actions'
-import './customLogin/performance.actions'
 import './customLogin/problem.actions'
 import './customLogin/locked.actions'
 
