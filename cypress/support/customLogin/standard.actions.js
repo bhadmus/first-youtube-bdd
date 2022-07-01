@@ -2,9 +2,9 @@ Cypress.Commands.add('LaunchPage', ()=>{
     cy.visit('/')
 })
 
-Cypress.Commands.add('InsertStandardUsername', ()=>{
+Cypress.Commands.add('InsertUsername', (username)=>{
     cy.fixture('selectors').then((el)=>{
-        cy.get(el.usernameField).should('exist').and('be.visible').type(el.standard)
+        cy.get(el.usernameField).should('exist').and('be.visible').type(username)
     })
 })
 
