@@ -1,10 +1,5 @@
 {
-    "testFiles": [
-        "Standard.feature",
-        "Problem.feature",
-        "Locked.feature",
-        "Performance.feature"
-    ],
+    "testFiles": "**/*.{feature, features}",
     "baseUrl": "https://www.saucedemo.com",
     "viewportHeight": 900,
     "viewportWidth": 1400,
