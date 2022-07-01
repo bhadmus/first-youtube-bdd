@@ -5,26 +5,24 @@ Feature: Testing Login for different types of users
     Background: User should launch the site
         Given I launch the SwagLab site
 
-    Scenario: A standard user should be able to login to SwagLabs
-        And I insert the "standard" username
+    Scenario Outline: A <userType> should be able to login to SwagLabs with different <experience>
+        And I insert the "<userType>" username
         And I insert the password
         When I click the Login button
-        Then I should see the products page  
+        Then I should see the "<experience>"
 
-    Scenario: A locked user should be able to login to SwagLabs
-        And I insert the "locked" username
-        And I insert the password
-        When I click the Login button
-        Then I should see the error message   
+        # First Approach
 
-    Scenario: A problem user should be able to login to SwagLabs
-        And I insert the "problem" username
-        And I insert the password
-        When I click the Login button
-        Then I should see the same product images   
+        # Examples:
+        #         | userType | experience            |
+        #         | standard | products page         |
+        #         | locked   | error message         |
+        #         | problem  | multiple images       |
+        #         | glitch   | delayed products page |
 
-    Scenario: A performance user should experience a glitch while trying to login to SwagLabs
-        And I insert the "glitch" username
-        And I insert the password
-        When I click the Login button
-        Then I should see the products page    
+        Examples:
+            | userType                | experience            |
+            | standard_user           | products page         |
+            | locked_out_user         | error message         |
+            | problem_user            | multiple images       |
+            | performance_glitch_user | delayed products page |
